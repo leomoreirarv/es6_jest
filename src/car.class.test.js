@@ -16,7 +16,7 @@ describe('Car testing', () => {
         expect(car instanceof Vehicle).toBeTruthy();
     });
 
-    test("Car is a instance of Vehicle", () => {
+    test("Checks if vehicleMove has been called when Car moves", () => {
         const vehicleMove = jest.spyOn(Vehicle.prototype, "move");
         car.move();
         expect(vehicleMove).toHaveBeenCalled();
